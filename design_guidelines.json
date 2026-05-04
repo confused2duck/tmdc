@@ -1,0 +1,142 @@
+{
+  "theme": "Light",
+  "archetype": "ARCHETYPE 4: SWISS & HIGH-CONTRAST",
+  "brand": "The Modern Data Company",
+  "typography": {
+    "fonts": {
+      "heading": "Outfit",
+      "body": "Manrope",
+      "mono": "JetBrains Mono"
+    },
+    "scales": {
+      "h1": "text-5xl sm:text-6xl tracking-tighter leading-none font-medium",
+      "h2": "text-3xl sm:text-4xl tracking-tight leading-tight font-medium",
+      "h3": "text-xl sm:text-2xl tracking-tight leading-snug font-medium",
+      "h4": "text-lg font-medium",
+      "body": "text-base leading-relaxed text-slate-600",
+      "small": "text-sm uppercase tracking-[0.2em] font-bold"
+    }
+  },
+  "colors": {
+    "background": {
+      "default": "#FFFFFF",
+      "subtle": "#F8FAFC",
+      "dark": "#0B0F19"
+    },
+    "text": {
+      "primary": "#0B0F19",
+      "secondary": "#475569",
+      "inverse": "#FFFFFF",
+      "accent": "#00C2E0"
+    },
+    "primary": {
+      "default": "#0B0F19",
+      "hover": "#1E293B",
+      "active": "#000000"
+    },
+    "accent": {
+      "teal": "#00C2E0",
+      "blue": "#0F62FE"
+    },
+    "border": {
+      "default": "#E2E8F0",
+      "dark": "#334155"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#0B0F19] text-white hover:bg-slate-800 transition-all duration-300 ease-out rounded-none px-8 py-4 font-medium",
+      "secondary": "bg-white text-[#0B0F19] border border-[#0B0F19] hover:bg-slate-50 transition-all duration-300 ease-out rounded-none px-8 py-4 font-medium",
+      "ghost": "text-[#0B0F19] hover:text-[#00C2E0] transition-colors duration-300 ease-out font-medium inline-flex items-center gap-2",
+      "rules": [
+        "Never use teal for primary CTA background. Teal is for accents and text highlights only.",
+        "Add an arrow icon (lucide-react) to primary and ghost buttons that translates slightly on hover."
+      ]
+    },
+    "cards": {
+      "default": "bg-white border border-slate-200 p-8 hover:-translate-y-1 hover:shadow-xl transition-all duration-300",
+      "dark": "bg-[#0B0F19] border border-slate-800 p-8 text-white hover:border-slate-600 transition-colors duration-300",
+      "glass": "bg-white/70 backdrop-blur-xl border border-white/40 shadow-sm p-8"
+    },
+    "inputs": {
+      "default": "border-b border-slate-300 bg-transparent rounded-none px-0 py-3 focus:border-[#0B0F19] focus:ring-0 transition-colors placeholder:text-slate-400"
+    }
+  },
+  "layout_and_spacing": {
+    "container": "max-w-[1280px] mx-auto px-6 md:px-12",
+    "section_padding": "py-24 md:py-32",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-12 gap-8",
+    "rules": [
+      "Use optical alignment: ensure icons in buttons are visually centered.",
+      "Containers with borders must have internal padding (p-8).",
+      "Leave negative space around the hero section. Do not cram content."
+    ]
+  },
+  "motion_and_interaction": {
+    "scroll": "Use Framer Motion for scroll-triggered reveal animations. Fade up and slight translate-y.",
+    "hover": "Cards should have a subtle lift (-translate-y-1) and increased shadow. Buttons must have clear hover state contrast changes.",
+    "lifecycle_diagram": "Build a 4-stage interactive diagram using Framer Motion. Clicking a stage expands its details while collapsing others (accordion or tabs style but visual).",
+    "sticky_cta": "Implement a bottom sticky bar that appears after scrolling past the hero section, offering a persistent 'Book a Call' CTA."
+  },
+  "sections_breakdown": {
+    "hero": {
+      "description": "Stark white background with massive typographic statement. High-contrast.",
+      "components_needed": ["Animated H1", "Subheadline", "Primary CTA", "Secondary CTA Ghost"],
+      "background": "White, maybe with subtle floating UI elements or the abstract tech image with high opacity overlay."
+    },
+    "problem_statement": {
+      "description": "Dark section (#0B0F19) to create tension. Highlights the pain points of fragmented platforms.",
+      "layout": "Grid with big typography on left, drawbacks listed on right with red/warning accents for the problem."
+    },
+    "solution": {
+      "description": "Transition back to light. Clean, authoritative statement.",
+      "layout": "Center-aligned massive text followed by bento grid cards."
+    },
+    "lifecycle_diagram": {
+      "description": "Interactive component showing Ingest -> Transform -> Govern -> Serve.",
+      "layout": "Horizontal or vertical interactive timeline using Framer Motion."
+    },
+    "business_outcomes": {
+      "description": "4 cards grid showing ROI.",
+      "layout": "2x2 grid, high padding, minimalist icons."
+    },
+    "differentiators": {
+      "description": "What sets DataOS apart.",
+      "layout": "Grid with icons (lucide-react). Use 'The Tracing Beam' or subtle grid borders here."
+    },
+    "use_cases": {
+      "description": "Pills or chips layout for the 5 strategic use cases.",
+      "layout": "Flex wrap with large outline chips that fill on hover."
+    },
+    "proof_of_impact": {
+      "description": "Big numbers/stats.",
+      "layout": "4 columns. Massive numbers using 'Outfit' font, light weight."
+    },
+    "final_cta": {
+      "description": "High contrast dark section.",
+      "layout": "Center aligned, very simple, large CTA buttons."
+    }
+  },
+  "media": {
+    "image_urls": {
+      "hero_bg": {
+        "url": "https://images.pexels.com/photos/17485706/pexels-photo-17485706.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Abstract 3D render of digital blocks to be used very subtly as a background element or mask."
+      },
+      "logo_1": {
+        "url": "https://images.pexels.com/photos/2417848/pexels-photo-2417848.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "To be used if placeholder logos are needed for customer proof."
+      }
+    }
+  },
+  "instructions_to_main_agent": [
+    "Install required dependencies: framer-motion, lucide-react, clsx, tailwind-merge.",
+    "Create the React components modularly.",
+    "Implement the lead capture modal using a dialog component that sends data to a mock Google Sheets backend (console.log the payload).",
+    "Add placeholder scripts for Google Ads conversion tracking in the index.html or as useEffect hooks when the form submits.",
+    "Do NOT use 'Inter' for headings. Use 'Outfit' from Google Fonts. Import it in index.html.",
+    "Ensure all interactive elements have data-testid attributes for testing.",
+    "The lifecycle diagram must be interactive. Use framer-motion AnimatePresence to show/hide stage details.",
+    "Strictly follow the color rules: No Teal for CTA buttons. CTAs must be Obsidian/Dark Navy."
+  ]
+}
